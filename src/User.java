@@ -2,6 +2,8 @@ public class User {
 
     private String id;
     private Role role;
+    private int[] users;
+    private int noOfUsers = 0;
 
     //No-arg constructor
     public User(){}
@@ -10,14 +12,15 @@ public class User {
     public User(String id, Role role){
         this.id = id;
         this.role = role;
+
     }
     //Getters
     public String getId() {
         return id;
     }
 
-    public Role getRole() {
-        return role;
+    public String getRole() {
+        return role.roleString();
     }
 
     //Setters

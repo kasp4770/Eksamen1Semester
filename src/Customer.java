@@ -5,8 +5,4 @@ public class Customer extends User {
         setRole(Role.CUS);
 
     }
-    public String getRoleString(){
-        return Role.CUS.roleString();
-    }
-
 }

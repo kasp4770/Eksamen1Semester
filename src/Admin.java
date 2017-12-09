@@ -4,6 +4,7 @@ public class Admin extends User {
         setId(id);
         setRole(Role.ADM);
         Bank.users.add(this);
+        Bank.noOfAccounts ++;
     }
 
     public void displayUsers() {

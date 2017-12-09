@@ -12,19 +12,20 @@ public class Main {
 //Test af ArrayList<User> users
 
         //Oprettelse af bank objekt og dermed ArrayList's
-        Bank bank = new Bank();
+        Bank bankTest = new Bank();
 
-        Admin adm1 = new Admin("1234");
-        Admin adm2 = new Admin("4321");
+        Admin adm1Test = new Admin("1234");
+        Admin adm2Test = new Admin("4321");
 
-        adm1.displayUsers();
+        adm1Test.displayUsers();
 //----------------------------------------------------------------------------------------------------------------------
         System.out.println("\n-- BANK -- \n");
 
         //Account a = new Account("0205912533", 4442533, 15000.0);
         //Account a2 = new Account("0205912533", 5552533, 2000.0);
 
-
+        Bank bank = new Bank();
+        Admin adm1 = new Admin("0205912533");
 
         int userChoice;
 

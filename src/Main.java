@@ -7,6 +7,18 @@ public class Main {
 
         System.out.println(cus.getId() + " " + cus.getRole());
 
+        System.out.println();
+
+//Test af ArrayList<User> users
+
+        //Oprettelse af bank objekt og dermed ArrayList's
+        Bank bank = new Bank();
+
+        Admin adm1 = new Admin("1234");
+        Admin adm2 = new Admin("4321");
+
+        adm1.displayUsers();
+//----------------------------------------------------------------------------------------------------------------------
         System.out.println("\n-- BANK -- \n");
 
         //Account a = new Account("0205912533", 4442533, 15000.0);

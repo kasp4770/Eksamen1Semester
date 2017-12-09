@@ -1,15 +1,17 @@
+import java.util.ArrayList;
+
 public class Account {
 
     private String cusId;
     private int accountNumber;
     private double balance;
-    private Account[] accounts;
-    private int noOfAccounts;
+    //private ArrayList<Account> accounts;
 
     public Account(String cusId, int accountNumber, double balance){
-        Account a = new Account(cusId, accountNumber, balance);
-        accounts[noOfAccounts] = a;
-        noOfAccounts++;
+        this.cusId = cusId;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        Bank.accounts.add(this);
     }
 
     //Getters
@@ -25,14 +27,6 @@ public class Account {
         return balance;
     }
 
-    public Account[] getAccounts() {
-        return accounts;
-    }
-
-    public int getNoOfAccounts() {
-        return noOfAccounts;
-    }
-
     //Setters
     public void setCusId(String cusId) {
         this.cusId = cusId;
@@ -44,13 +38,5 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
-    }
-
-    public void setAccounts(Account[] accounts) {
-        this.accounts = accounts;
-    }
-
-    public void setNoOfAccounts(int noOfAccounts) {
-        this.noOfAccounts = noOfAccounts;
     }
 }

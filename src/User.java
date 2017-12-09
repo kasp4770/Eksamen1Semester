@@ -2,8 +2,6 @@ public class User {
 
     private String id;
     private Role role;
-    private int[] users;
-    private int noOfUsers = 0;
 
     //No-arg constructor
     public User(){}

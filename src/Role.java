@@ -1,4 +1,4 @@
-public enum Role { ADM("Administrator"), EMP("Employee"), CUS("Customer");
+public enum Role { ADM("Administrator"), EMP("Medarbejder"), CUS("Kunde");
 
     private String role;
 

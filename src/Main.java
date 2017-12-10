@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //int intMax = 2147483647;
+        System.out.println("Højeste int værdi: " + Integer.MAX_VALUE);
 
         System.out.println("-- TEST AFSNIT--");
         Customer cus = new Customer("0205912533");
@@ -47,7 +47,7 @@ public class Main {
                         System.out.println("1) Se oversigt over brugere\t\t2) Se oversigt over kontoer\t\t3) Log ud\n");
                         userChoiceInt = in.nextInt();
                         switch (userChoiceInt){
-                            case 1: //Bank/Administrator/OversigtBruger/
+                            case 1: //Bank/Administrator/UsersOverview/
                                 System.out.println("Oversigt over brugere (id): ");
 
                                 do{System.out.println("1) Tilbage");
@@ -57,7 +57,7 @@ public class Main {
                                     }
                                 } while(userChoiceInt != 1);
                                 break;
-                            case 2: //Bank/Administrator/OversigtKonto/
+                            case 2: //Bank/Administrator/AccountOverview/
                                 System.out.println("Oversigt over kontoer (konto nr. og balance): ");
 
                                 do {
@@ -70,17 +70,17 @@ public class Main {
                                     break;
                         }
                     } while(userChoiceInt !=3);break;
-                case 2: //Bank/Medarbejder/
+                case 2: //Bank/Employee/
                     do {
                         System.out.println("1) Opret kunde\t\t2) Opret konto\t\t3) Log ud");
                         userChoiceInt = in.nextInt();
                         switch(userChoiceInt) {
-                            case 1: //Bank/Medarbejder/OpretKunde/
+                            case 1: //Bank/Employee/CreateCustomer/
                                 System.out.println("Indtast CPR nr. og tryk enter:");
                                 userChoiceString = in.next();
 
                                 break;
-                            case 2: //Bank/Medarbejder/OpretKonto/
+                            case 2: //Bank/Employee/CreateAccount/
                                 System.out.print("Indtast CPR nr. og tryk enter: ");
                                 userChoiceString = in.next();
 
@@ -101,8 +101,10 @@ public class Main {
                         System.out.println("1) Overfør beløb til konto\t\t2) Saldo for konto(er)\t\t3) Log ud");
                         userChoiceInt = in.nextInt();
                         switch(userChoiceInt){
-                            case 1: break;
-                            case 2: break;
+                            case 1: //Bank/Customer/TransferAmount/
+                                break;
+                            case 2: //Bank/Customer/Balance/
+                                break;
                         }
                     }while(userChoiceInt != 3);
 

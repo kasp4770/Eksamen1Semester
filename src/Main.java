@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        //int intMax = 2147483647;
+
         System.out.println("-- TEST AFSNIT--");
         Customer cus = new Customer("0205912533");
 
@@ -27,44 +30,85 @@ public class Main {
         Bank bank = new Bank();
         Admin adm1 = new Admin("0205912533");
 
-        int userChoice;
-
+        int userChoiceInt;
+        double userChoiceDouble;
+        String userChoiceString;
 
 
         do {
             System.out.println("Log ind som:\n1) Administrator\t2) Medarbejder\t\t3) Kunde\t\t4) Afslut\n");
 
             Scanner in = new Scanner(System.in);
-            userChoice = in.nextInt();
+            userChoiceInt = in.nextInt();
 
-            switch (userChoice) {
+            switch (userChoiceInt) {
                 case 1: //Bank/Administrator/
                     do{
                         System.out.println("1) Se oversigt over brugere\t\t2) Se oversigt over kontoer\t\t3) Log ud\n");
-                        userChoice = in.nextInt();
-                        switch (userChoice){
+                        userChoiceInt = in.nextInt();
+                        switch (userChoiceInt){
                             case 1: //Bank/Administrator/OversigtBruger/
                                 System.out.println("Oversigt over brugere (id): ");
 
                                 do{System.out.println("1) Tilbage");
-                                    userChoice = in.nextInt();
-                                    if (userChoice != 1)
+                                    userChoiceInt = in.nextInt();
+                                    if (userChoiceInt != 1){
                                         System.out.println("Fejl: Forkert input!");
-                                } while(userChoice != 1);
+                                    }
+                                } while(userChoiceInt != 1);
                                 break;
                             case 2: //Bank/Administrator/OversigtKonto/
                                 System.out.println("Oversigt over kontoer (konto nr. og balance): ");
 
-                                System.out.println("1) Tilbage");
-                                userChoice = in.nextInt();
-                                if(userChoice == 1)
+                                do {
+                                    System.out.println("1) Tilbage");
+                                    userChoiceInt = in.nextInt();
+                                    if (userChoiceInt != 1){
+                                        System.out.println("Fejl. Forkert input!");
+                                    }
+                                }while(userChoiceInt != 1);
                                     break;
                         }
-                    } while(userChoice !=3);break;
-                case 2:
-                    System.out.println("1) Opret kunde\n2) Opret konto\n ");break;
+                    } while(userChoiceInt !=3);break;
+                case 2: //Bank/Medarbejder/
+                    do {
+                        System.out.println("1) Opret kunde\t\t2) Opret konto\t\t3) Log ud");
+                        userChoiceInt = in.nextInt();
+                        switch(userChoiceInt) {
+                            case 1: //Bank/Medarbejder/OpretKunde/
+                                System.out.println("Indtast CPR nr. og tryk enter:");
+                                userChoiceString = in.next();
+
+                                break;
+                            case 2: //Bank/Medarbejder/OpretKonto/
+                                System.out.print("Indtast CPR nr. og tryk enter: ");
+                                userChoiceString = in.next();
+
+                                System.out.print("Indtast et konto nr. og tryk enter (8 cifre): ");
+                                userChoiceInt = in.nextInt();
+
+                                System.out.print("Indtast kundens rådighedsbeløb: ");
+                                userChoiceDouble = in.nextDouble();
+
+                                System.out.println("\nNy konto er oprettet!\n");
+
+                                break;
+                        }
+                    }while(userChoiceInt != 3);
+                case 3: //Bank/Kunde/
+                    do{
+                        System.out.println("Vælg handling:");
+                        System.out.println("1) Overfør beløb til konto\t\t2) Saldo for konto(er)\t\t3) Log ud");
+                        userChoiceInt = in.nextInt();
+                        switch(userChoiceInt){
+                            case 1: break;
+                            case 2: break;
+                        }
+                    }while(userChoiceInt != 3);
+
+                    break;
             }
-        } while (userChoice != 4);
+        } while (userChoiceInt != 4);
 
     }
 }

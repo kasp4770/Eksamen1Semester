@@ -6,23 +6,31 @@ public class Main {
         System.out.println("Højeste int værdi: " + Integer.MAX_VALUE);
 
         System.out.println("-- TEST AFSNIT--");
-        Customer cus = new Customer("0205912533");
+        System.out.println();
 
-        System.out.println(cus.getId() + " " + cus.getRole());
+        Bank bankTest = new Bank();
+        Employee eTest = new Employee("15968");
+
+        Customer c = new Customer("0205912533");
+        Account aTest = new Account("0205912533", 4442533, 15000.0);
+        Account a2Test = new Account("0205912533", 5552533, 2000.0);
+
+        eTest.displayAccounts();
 
         System.out.println();
 
 //Test af ArrayList<User> users
 
         //Oprettelse af bank objekt og dermed ArrayList's
-        Bank bankTest = new Bank();
+
 
         Admin adm1Test = new Admin("1234");
         Admin adm2Test = new Admin("4321");
 
-        adm1Test.displayUsers();
+        //adm1Test.displayUsers();
 //----------------------------------------------------------------------------------------------------------------------
         System.out.println("\n-- BANK -- \n");
+
 
         //Account a = new Account("0205912533", 4442533, 15000.0);
         //Account a2 = new Account("0205912533", 5552533, 2000.0);

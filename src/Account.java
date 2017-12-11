@@ -12,6 +12,16 @@ public class Account {
         this.accountNumber = accountNumber;
         this.balance = balance;
         Bank.accounts.add(this);
+        Bank.noOfAccounts++;
+        /*if (!Bank.users.equals(cusId)) { //Virker ikke efter hensigten
+                Customer c = new Customer(cusId);
+                Bank.noOfUsers++;
+        }
+        else {
+                System.out.println("Eksisterende bruger har fået oprettet en konto");
+        }*/
+
+
     }
 
     //Getters
